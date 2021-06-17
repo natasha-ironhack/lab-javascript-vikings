@@ -6,10 +6,12 @@ class
 should receive 2 arguments (health & strength)
 should receive the health property as its 1st argument
 should receive the strength property as its 2nd argument
+
 attack() method
 should be a function
 should receive 0 arguments
 should return the strength property of the Soldier
+
 receiveDamage() method
 should be a function
 should receive 1 argument (the damage)
@@ -17,10 +19,22 @@ should remove the received damage from the health property
 shouldn't return anything
 */
 
-class Soldier {}
+class Soldier {
 constructor (health, strength) {
+     this.health = health
+     this.strength = strength
+ }
+attack () {
+  return `My strength is ${this.strength}, which I implement with my spear.`
+}
+receiveDamage(damage) {
 
 }
+}
+
+let achilles = new Soldier ("excellent", "good aim")
+console.log (achilles)
+console.log(achilles.attack())
 
 
 
@@ -70,7 +84,25 @@ should receive 0 arguments
 should return "Odin Owns You All!"
 
 */
-class Viking {}
+class Viking extends Soldier {
+  constructor (name, health, strength) {
+    super (name, health, property)
+  }
+  attack() {
+
+  }
+  receiveDamage(damage) {
+    if (Viking.length === 6) {
+      return `${this.name} has received DAMAGE points of damage`
+    } 
+      return `${this.name} has died in the act of combat`
+    }
+  }
+  battleCry() {
+      return `Odin Owns You All!`
+  }
+}
+console.log()
 
 
 
